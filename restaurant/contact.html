@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+	Name: Roman Glusker
+	Date Created: 11/3/2018
+	Most recent revision: 
+-->
+<html lang="en">
+	<head>
+		<title>Contact Us</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Ristorante Romano</h1>
+				<hr />
+			</header>
+			<nav>
+				<p>
+					<a href="index.html">Home</a>
+					<a href="menu.html">Menu</a>
+					<a href="">Contact Us</a>
+				</p>
+				<hr />
+			</nav>
+			<article>
+				<form action="submit.html" method="POST">
+					<label for="name">Name: </label>
+					<input type="text" id="name" name="name"><br />
+					
+					<label for="email">Email: </label>
+					<input type="text" id="email" name="email"><br />
+					
+					<label for="phone">Phone: </label>
+					<input type="text" id="phone" name="phone"><br />
+					
+					<label for="reason">Reason for Inquiry: </label>
+					<select id="reason" name="reason">
+						<option value="default" selected>Catering</option>
+						<option value="party">Private Party</option>
+						<option value="feedback">Feedback</option>
+						<option value="other">Other</option>
+					</select><br />
+					
+					<label for="info">Additional Information: </label>
+					<textarea id="info" name="info"></textarea><br />
+					
+					<label>Have you been to the restaurant?</label>
+					<input type="radio" id="choice1" name="questionnaire" value="no">
+					<label for="choice1">No</label>
+					<input type="radio" id="choice2" name="questionnaire" value="yes">
+					<label for="choice2">Yes</label><br />
+				
+					<label>Best days to contact you</label>
+					<input type="checkbox" id="m" name="day" value="m">
+					<label for="frontEnd">M</label>
+					<input type="checkbox" id="t" name="day" value="t">
+					<label for="frontEnd">T</label>
+					<input type="checkbox" id="w" name="day" value="w">
+					<label for="frontEnd">W</label>
+					<input type="checkbox" id="th" name="day" value="th">
+					<label for="frontEnd">Th</label>
+					<input type="checkbox" id="f" name="day" value="f">
+					<label for="frontEnd">F</label>
+					
+					<br />
+					<input type="submit" name="submit" value="Send Request">
+				</form>
+			</article>
+			<footer>
+				<hr />
+				<p>123 Fermi St, Chicago, Illinois, 60637</p>
+				<p>(312) 476-6266</p>
+			</footer>
+		</main>
+	</body>
+</html>
