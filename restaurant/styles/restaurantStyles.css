@@ -1,0 +1,37 @@
+/*
+	Name: Roman Glusker
+	Date Created: 11/4/2018
+	Most recent revision: 11/5/2018
+*/
+
+article {
+	background-color:#6FB17B;
+	border: 1px solid black;
+}
+
+article p {
+	width:30%;
+	margin:auto;
+}
+
+header, footer {
+	text-align: center;
+	background-color: white;
+}
+
+header h1{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+a {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+a:visited {
+	color:green;
+}
+
+a:hover {
+	font-weight: bold;
+}

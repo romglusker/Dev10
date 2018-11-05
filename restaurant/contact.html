@@ -2,11 +2,36 @@
 <!--
 	Name: Roman Glusker
 	Date Created: 11/3/2018
-	Most recent revision: 
+	Most recent revision: 11/5/2018
 -->
 <html lang="en">
 	<head>
 		<title>Contact Us</title>
+		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+		<style>
+			label {
+				font-weight: bold;
+			}
+			header h1{
+				font-family: 'Yanone Kaffeesatz', sans-serif;
+			}
+			a {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			a:visited {
+				color:green;
+			}
+
+			a:hover {
+				font-weight: bold;
+			}
+			header, footer {
+				text-align: center;
+				background-color: white;
+			}
+		</style>
 	</head>
 	<body>
 		<main>
@@ -23,33 +48,34 @@
 				<hr />
 			</nav>
 			<article>
-				<form action="submit.html" method="POST">
+				<form action="submit.html" method="POST">	
+					<br />
 					<label for="name">Name: </label>
-					<input type="text" id="name" name="name"><br />
-					
+					<input type="text" id="name" name="name" class="block">
+					<br /><br />
 					<label for="email">Email: </label>
-					<input type="text" id="email" name="email"><br />
-					
+					<input type="text" id="email" name="email">
+					<br /><br />
 					<label for="phone">Phone: </label>
-					<input type="text" id="phone" name="phone"><br />
-					
+					<input type="text" id="phone" name="phone">
+					<br /><br />
 					<label for="reason">Reason for Inquiry: </label>
 					<select id="reason" name="reason">
 						<option value="default" selected>Catering</option>
 						<option value="party">Private Party</option>
 						<option value="feedback">Feedback</option>
 						<option value="other">Other</option>
-					</select><br />
-					
-					<label for="info">Additional Information: </label>
-					<textarea id="info" name="info"></textarea><br />
-					
+					</select>
+					<br /><br />
+					<label for="info" style="font-weight:normal">Additional Information: </label>
+					<textarea id="info" name="info"></textarea>
+					<br /><br />
 					<label>Have you been to the restaurant?</label>
 					<input type="radio" id="choice1" name="questionnaire" value="no">
 					<label for="choice1">No</label>
 					<input type="radio" id="choice2" name="questionnaire" value="yes">
 					<label for="choice2">Yes</label><br />
-				
+					<br />
 					<label>Best days to contact you</label>
 					<input type="checkbox" id="m" name="day" value="m">
 					<label for="frontEnd">M</label>
@@ -61,8 +87,7 @@
 					<label for="frontEnd">Th</label>
 					<input type="checkbox" id="f" name="day" value="f">
 					<label for="frontEnd">F</label>
-					
-					<br />
+					<br /><br />
 					<input type="submit" name="submit" value="Send Request">
 				</form>
 			</article>

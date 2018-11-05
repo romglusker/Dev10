@@ -2,11 +2,53 @@
 <!--
 	Name: Roman Glusker
 	Date Created: 11/2/2018
-	Most recent revision: 11/3/2018
+	Most recent revision: 11/5/2018
 -->
 <html lang="en">
 	<head>
 		<title>Menu</title>
+		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+		<style>
+			table {
+				margin: auto;
+				margin-bottom: 5px;
+				width: 90%;
+				border-collapse:collapse;
+			}
+			tr:nth-child(odd) {
+				background-color: white;
+			}
+			
+			tr:nth-child(even) {
+				background-color: #eecfb2;
+			}
+			th {
+				font-size: 1.2em;
+				text-align: left;
+			}
+			td {
+				border:1px solid black;
+			}
+			header h1{
+				font-family: 'Yanone Kaffeesatz', sans-serif;
+			}
+			a {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			a:visited {
+				color:green;
+			}
+
+			a:hover {
+				font-weight: bold;
+			}
+			header, footer {
+				text-align: center;
+				background-color: white;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -22,33 +64,58 @@
 			<hr />
 		</nav>
 		<main>
-			<table width="65%">
-					<tr>
-						<th>Bruschetta</th>
-						<th>Spaghetti alla carbonara</th>
-						<th>Bucatini all'Amatriciana</th>
-					</tr>
-					<tr>
-						<td>Grilled bread with olive oil, tomatoes, garlic, and salt.<br />$6.50</td>
-						<td>A classic Roman pasta dish made with egg, pecorino, pancetta, and pepper.<br />$13.00</td>
-						<td>Bucatini pasta with tomato sauce, pecorino, and guanciale.<br />$14.50</td>
-					</tr>
-					<tr>
-						<th>Pizza</th>
-						<th>Carciofi alla giudia</th>
-						<th>Gelato</th>
-					</tr>
-					<tr>
-						<td>Margherita - Marinara - Pepperoni <br /> $12.00 - $10.00 - $11.00 <br /> <em>Add toppings for $0.50 each</em></td>
-						<td>Deep-fried artichoke sautéed with garlic and olive oil. <br /> $7.00 </td>
-						<td>Lemon, Raspberry, Chocolate, Pistachio<br />$3.50</td>
-					</tr>
-				</table>
-				<footer>
-					<hr />
-					<p>123 Fermi St, Chicago, Illinois, 60637</p>
-					<p>(312) 476-6266</p>
-				</footer>
+			<table id="menu">
+				<tr>
+					<th>Bruschetta</th>
+					<th>Spaghetti alla carbonara</th>
+					<th>Bucatini all'Amatriciana</th>
+				</tr>
+				<tr>
+					<td>Grilled bread with olive oil, tomatoes, garlic, and salt.<br />$6.50</td>
+					<td>A classic Roman pasta dish made with egg, pecorino, pancetta, and pepper.<br />$13.00</td>
+					<td>Bucatini pasta with tomato sauce, pecorino, and guanciale.<br />$14.50</td>
+				</tr>
+				<tr>
+					<th>Pizza</th>
+					<th>Carciofi alla giudia</th>
+					<th>Gelato</th>
+				</tr>
+				<tr>
+					<td>Margherita - Marinara - Pepperoni <br /> $12.00 - $10.00 - $11.00 <br /> <em>Add toppings for $0.50 each</em></td>
+					<td>Deep-fried artichoke sautéed with garlic and olive oil. <br /> $7.00 </td>
+					<td>Lemon, Raspberry, Chocolate, Pistachio<br />$3.50</td>
+				</tr>
+			</table>
+			<table id="beverages">
+				<tr>
+					<th colspan=2>Beverages</th>
+				</tr>
+				<tr>
+					<td>San Pellegrino</td>
+					<td>$3.00</td>
+				</tr>
+				<tr>
+					<td>Fountain Soda</td>
+					<td>$2.25</td>
+				</tr>
+				<tr>
+					<td>Coffee</td>
+					<td>$3.50</td>
+				</tr>
+				<tr>
+					<td>Rootbeer</td>
+					<td>$3.00</td>
+				</tr>
+				<tr>
+					<td>Lemonade</td>
+					<td>$1.00</td>
+				</tr>
+			</table>
+			<footer>
+				<hr />
+				<p>123 Fermi St, Chicago, Illinois, 60637</p>
+				<p>(312) 476-6266</p>
+			</footer>
 		</main>
 	</body>
 </html>
