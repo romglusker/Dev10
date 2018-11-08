@@ -2,32 +2,35 @@
 <!--
 	Name: Roman Glusker
 	Date Created: 11/2/2018
-	Most recent revision: 11/5/2018
+	Most recent revision: 11/8/2018
 -->
 <html lang="en">
 	<head>
 		<title>Menu</title>
+		<meta charset="utf-8">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
 		<style>
-			table {
+			#menu, #beverages {
 				margin: auto;
 				margin-bottom: 5px;
 				width: 90%;
 				border-collapse:collapse;
+				text-align:center;
 			}
-			tr:nth-child(odd) {
-				background-color: white;
-			}
-			
-			tr:nth-child(even) {
-				background-color: #eecfb2;
-			}
-			th {
+			span {
 				font-size: 1.2em;
 				text-align: left;
 			}
-			td {
+			.td {
 				border:1px solid black;
+				background-color: white;
+			}
+			.th {
+				text-align: left;
+			}
+			#menu .td {
+				height:95px;
 			}
 			header h1{
 				font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -36,11 +39,9 @@
 				margin-left: 10px;
 				margin-right: 10px;
 			}
-
 			a:visited {
 				color:green;
 			}
-
 			a:hover {
 				font-weight: bold;
 			}
@@ -48,74 +49,139 @@
 				text-align: center;
 				background-color: white;
 			}
+			#home-button {
+				background-color: #6FA17B;
+				color: white;
+			}
+			#menu-button {
+				background-color: white;
+				color: #6FA17B;
+			}
+			#contact-button {
+				background-color: red;
+				color: white;
+			}
+			nav {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				margin-bottom: 5px;
+			}
+			nav .btn {
+				width: 100%;
+				margin: auto;
+				border: 1px solid black;
+			}
+			article {
+				background-color:#CDD3CE;
+				border: 1px solid black;
+			}
+			.jumbotron{ 
+				background-color:#6FA17B;
+			}		
 		</style>
 	</head>
 	<body>
-		<header>
+		<header class="jumbotron">
 			<h1>Ristorante Romano</h1>
+			<h2>Opening a new location in Minneapolis!</h2>
 		</header>
-		<nav>
-			<hr />
-			<p>
-				<a href="index.html">Home</a>
-				<a href="">Menu</a>
-				<a href="contact.html">Contact Us</a>
-			</p>
-			<hr />
-		</nav>
-		<main>
-			<table id="menu">
-				<tr>
-					<th>Bruschetta</th>
-					<th>Spaghetti alla carbonara</th>
-					<th>Bucatini all'Amatriciana</th>
-				</tr>
-				<tr>
-					<td>Grilled bread with olive oil, tomatoes, garlic, and salt.<br />$6.50</td>
-					<td>A classic Roman pasta dish made with egg, pecorino, pancetta, and pepper.<br />$13.00</td>
-					<td>Bucatini pasta with tomato sauce, pecorino, and guanciale.<br />$14.50</td>
-				</tr>
-				<tr>
-					<th>Pizza</th>
-					<th>Carciofi alla giudia</th>
-					<th>Gelato</th>
-				</tr>
-				<tr>
-					<td>Margherita - Marinara - Pepperoni <br /> $12.00 - $10.00 - $11.00 <br /> <em>Add toppings for $0.50 each</em></td>
-					<td>Deep-fried artichoke sautéed with garlic and olive oil. <br /> $7.00 </td>
-					<td>Lemon, Raspberry, Chocolate, Pistachio<br />$3.50</td>
-				</tr>
-			</table>
-			<table id="beverages">
-				<tr>
-					<th colspan=2>Beverages</th>
-				</tr>
-				<tr>
-					<td>San Pellegrino</td>
-					<td>$3.00</td>
-				</tr>
-				<tr>
-					<td>Fountain Soda</td>
-					<td>$2.25</td>
-				</tr>
-				<tr>
-					<td>Coffee</td>
-					<td>$3.50</td>
-				</tr>
-				<tr>
-					<td>Rootbeer</td>
-					<td>$3.00</td>
-				</tr>
-				<tr>
-					<td>Lemonade</td>
-					<td>$1.00</td>
-				</tr>
-			</table>
-			<footer>
-				<hr />
-				<p>123 Fermi St, Chicago, Illinois, 60637</p>
-				<p>(312) 476-6266</p>
-			</footer>
-		</main>
+		<div class="container">			
+			<div class="row">
+				<nav>
+					<p>
+						<div class="col-md-4 col-sm">
+							<a id="home-button" class="btn badge-pill" href="index.html"><i class="glyphicon glyphicon-home"></i></a>
+						</div>
+						<div class="col-md-4 col-sm">
+							<a id="menu-button" class="btn badge-pill" href="">Menu</a>
+						</div>
+						<div class="col-md-4 col-sm">
+							<a id="contact-button" class="btn badge-pill" href="contact.html">Contact Us</a>
+						</div>
+					</p>
+					<hr /> <br />
+				</nav>
+			</div>
+		</div>
+				<main>
+					<article>
+					<br />
+					<div id="menu" class="container">
+						<div class="row">
+							<div class="col-md-12 th"><strong>Menu</strong></div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 td">
+								<span><strong>Bruschetta</strong></span><br />
+								Grilled bread with olive oil, tomatoes, garlic, and salt.<br />
+								$6.50
+							</div>
+							<div class="col-md-4 td">
+								<span><strong>Spaghetti alla carbonara</strong></span><br />
+								Roman pasta dish made with egg, pecorino, pancetta, and pepper.<br />
+								$13.00
+							</div>
+							<div class="col-md-4 td">
+								<span><strong>Bucatini all'Amatriciana</strong></span><br />
+								Bucatini pasta with tomato sauce, pecorino, and guanciale.<br />
+								$14.50
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 td">
+								<span><strong>Pizza</strong></span><br />
+								Margherita - Marinara - Pepperoni<br />
+								$12.00 - $10.00 - $11.00<br />
+								<em>Add toppings for $0.50 each</em>
+							</div>
+							<div class="col-md-4 td">
+								<span><strong>Carciofi alla giudia</strong></span><br />
+								Deep-fried artichoke sautéed with garlic and olive oil.<br />
+								$7.00
+							</div>
+							<div class="col-md-4 td">
+								<span><strong>Gelato</strong></span><br />
+								Lemon, Raspberry, Chocolate, Pistachio<br />
+								$3.50
+							</div>
+						</div>
+					</div>
+					<br />
+					<div id="beverages" class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 th"><strong>Beverages</strong></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 td" style="background-color:#DBC3A3;">San Pellegrino</div>
+							<div class="col-md-3 col-sm-3 td" style="background-color:#DBC3A3;">$3.00</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 td">Fountain Soda</div>
+							<div class="col-md-3 col-sm-3 td">$2.25</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 td" style="background-color:#DBC3A3;">Coffee</div>
+							<div class="col-md-3 col-sm-3 td" style="background-color:#DBC3A3;">$3.50</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 td">Rootbeer</div>
+							<div class="col-md-3 col-sm-3 td">$3.00</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3 td" style="background-color:#DBC3A3;">Lemonade</div>
+							<div class="col-md-3 col-sm-3 td" style="background-color:#DBC3A3;">$1.00</div>
+						</div>
+					</table>
+				</article>
+				<footer>
+					<hr />
+					<p>123 Fermi St, Chicago, Illinois, 60637</p>
+					<p>(312) 476-6266</p>
+				</footer>
+			</main>
+		<noscript>This site is best viewed with JavaScript enabled!</noscript>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
 </html>

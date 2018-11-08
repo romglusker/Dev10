@@ -2,12 +2,14 @@
 <!--
 	Name: Roman Glusker
 	Date Created: 11/3/2018
-	Most recent revision: 11/5/2018
+	Most recent revision: 11/8/2018
 -->
 <html lang="en">
 	<head>
 		<title>Contact Us</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+		<script type="text/JavaScript" src="scripts/contact.js"></script>
 		<style>
 			label {
 				font-weight: bold;
@@ -19,11 +21,9 @@
 				margin-left: 10px;
 				margin-right: 10px;
 			}
-
 			a:visited {
 				color:green;
 			}
-
 			a:hover {
 				font-weight: bold;
 			}
@@ -31,65 +31,120 @@
 				text-align: center;
 				background-color: white;
 			}
+			#home-button {
+				background-color: #6FA17B;
+				color: white;
+			}
+			#menu-button {
+				background-color: white;
+				color: #6FA17B;
+			}
+			#contact-button {
+				background-color: red;
+				color: white;
+			}
+			nav {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				margin-bottom: 5px;
+			}
+			nav .btn {
+				width: 100%;
+				margin: auto;
+				border: 1px solid black;
+			}
+			article {
+				background-color:#CDD3CE;
+				border: 1px solid black;
+			}
+			.jumbotron{ 
+				background-color:#6FA17B;
+			}
 		</style>
 	</head>
 	<body>
+		<div class="container">
 		<main>
-			<header>
+			<header class="jumbotron">
 				<h1>Ristorante Romano</h1>
-				<hr />
+				<h2>Opening a new location in Minneapolis!</h2>
 			</header>
 			<nav>
 				<p>
-					<a href="index.html">Home</a>
-					<a href="menu.html">Menu</a>
-					<a href="">Contact Us</a>
+					<div class="col-md-4 col-sm-3">
+						<a id="home-button" class="btn badge-pill" href="index.html"><i class="glyphicon glyphicon-home"></i></a>
+					</div>
+					<div class="col-md-4 col-sm-3">
+						<a id="menu-button" class="btn badge-pill" href="menu.html">Menu</a>
+					</div>
+					<div class="col-md-4 col-sm-3">
+						<a id="contact-button" class="btn badge-pill" href="">Contact Us</a>
+					</div>
 				</p>
-				<hr />
+				<hr /><br />
 			</nav>
 			<article>
-				<form action="submit.html" method="POST">	
-					<br />
-					<label for="name">Name: </label>
-					<input type="text" id="name" name="name" class="block">
-					<br /><br />
-					<label for="email">Email: </label>
-					<input type="text" id="email" name="email">
-					<br /><br />
-					<label for="phone">Phone: </label>
-					<input type="text" id="phone" name="phone">
-					<br /><br />
-					<label for="reason">Reason for Inquiry: </label>
-					<select id="reason" name="reason">
-						<option value="default" selected>Catering</option>
-						<option value="party">Private Party</option>
-						<option value="feedback">Feedback</option>
-						<option value="other">Other</option>
-					</select>
-					<br /><br />
-					<label for="info" style="font-weight:normal">Additional Information: </label>
-					<textarea id="info" name="info"></textarea>
-					<br /><br />
-					<label>Have you been to the restaurant?</label>
-					<input type="radio" id="choice1" name="questionnaire" value="no">
-					<label for="choice1">No</label>
-					<input type="radio" id="choice2" name="questionnaire" value="yes">
-					<label for="choice2">Yes</label><br />
-					<br />
-					<label>Best days to contact you</label>
-					<input type="checkbox" id="m" name="day" value="m">
-					<label for="frontEnd">M</label>
-					<input type="checkbox" id="t" name="day" value="t">
-					<label for="frontEnd">T</label>
-					<input type="checkbox" id="w" name="day" value="w">
-					<label for="frontEnd">W</label>
-					<input type="checkbox" id="th" name="day" value="th">
-					<label for="frontEnd">Th</label>
-					<input type="checkbox" id="f" name="day" value="f">
-					<label for="frontEnd">F</label>
-					<br /><br />
-					<input type="submit" name="submit" value="Send Request">
-				</form>
+				<div class="container">
+					<form name="contact-form" class="form-inline col-md-4 col-md-offset-4" onsubmit="return validateItems();">	
+						<div class="form-group">
+							<br />
+							<label for="name">Name: </label>
+							<input type="text" id="name" name="name" class="form-control">
+						</div>
+						<br /><br />
+						<div class="form-group">
+							<label for="email">Email: </label>
+							<input type="text" id="email" name="email" class="form-control">
+						</div>
+						<br /><br />
+						<div class="form-group">
+							<label for="phone">Phone: </label>
+							<input type="text" id="phone" name="phone" class="form-control">
+						</div>
+						<br /><br />
+						<div class="form-group">
+							<label for="reason">Reason for Inquiry: </label>
+							<select id="reason" name="reason" class="form-control">
+								<option value="default" selected>Catering</option>
+								<option value="party">Private Party</option>
+								<option value="feedback">Feedback</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<br /><br />
+						<div class="form-group">
+							<label for="info" style="font-weight:normal">Additional Information: </label>
+							<textarea id="info" name="info" class="form-control"></textarea>
+						</div>
+						<br /><br />
+						<div class="form-group">
+						<label>Have you been to the restaurant?</label>
+							<input type="radio" id="choice1" name="questionnaire" value="no" class="form-control">
+							<label for="choice1">No</label>
+						</div>
+						<div class="form-group">
+							<input type="radio" id="choice2" name="questionnaire" value="yes" class="form-control">
+							<label for="choice2">Yes</label><br />
+						</div>
+						<br />
+						<div class="form-group">
+							<label>Best days to contact you</label>
+							<input type="checkbox" id="m" name="day" value="m" class="form-control">
+							<label for="frontEnd">M</label>
+							<input type="checkbox" id="t" name="day" value="t" class="form-control">
+							<label for="frontEnd">T</label>
+							<input type="checkbox" id="w" name="day" value="w" class="form-control">
+							<label for="frontEnd">W</label>
+							<input type="checkbox" id="th" name="day" value="th" class="form-control">
+							<label for="frontEnd">Th</label>
+							<input type="checkbox" id="f" name="day" value="f" class="form-control">
+							<label for="frontEnd">F</label>
+						</div>
+						<br /><br />
+						<button type="submit" name="submit" class="btn btn-default">Send Request</button>
+						<br /><br />
+					</form>
+				</div>
 			</article>
 			<footer>
 				<hr />
@@ -97,5 +152,10 @@
 				<p>(312) 476-6266</p>
 			</footer>
 		</main>
+		</div>
+		<noscript>This site is best viewed with JavaScript enabled!</noscript>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
 </html>

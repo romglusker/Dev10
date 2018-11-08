@@ -1,11 +1,11 @@
 /*
 	Name: Roman Glusker
 	Date Created: 11/4/2018
-	Most recent revision: 11/5/2018
+	Most recent revision: 11/8/2018
 */
 
 article {
-	background-color:#6FB17B;
+	background-color:#CDD3CE;
 	border: 1px solid black;
 }
 
@@ -22,6 +22,37 @@ header, footer {
 header h1{
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
+
+nav {
+	border-top: thin #6FB17B solid;
+	border-bottom: thin #6FB17B solid;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.jumbotron{ 
+	background-color:#6FA17B;
+}
+
+nav .btn {
+	width: 100%;
+	margin: auto;
+	border: 1px solid black;
+}
+
+#home-button {
+	background-color: #6FA17B;
+	color: white;
+}
+#menu-button {
+	background-color: white;
+	color: #6FA17B;
+}
+#contact-button {
+	background-color: red;
+	color: white;
+}
+
 
 a {
 	margin-left: 10px;

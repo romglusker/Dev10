@@ -2,26 +2,64 @@
 <!--
 	Name: Roman Glusker
 	Date Created: 11/2/2018
-	Most recent revision: 11/5/2018
+	Most recent revision: 11/8/2018
 -->
 <html lang="en">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Home Page</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
 	</head>
 	<body>
 		<main>
-			<header>
+			<header class="jumbotron">
 				<h1>Ristorante Romano</h1>
+				<h2>Opening a new location in Minneapolis!</h2>
 			</header>
 			<nav>
-				<hr />
 				<p>
-					<a href="">Home</a>
-					<a href="menu.html">Menu</a>
-					<a href="contact.html">Contact Us</a>
+					<div class="col-md-4 col-sm-3">
+						<a id="home-button" class="btn badge-pill" href=""><i class="glyphicon glyphicon-home"></i></a>
+					</div>
+					<div class="col-md-4 col-sm-3">
+						<a id="menu-button" class="btn badge-pill" href="menu.html">Menu</a>
+					</div>
+					<div class="col-md-4 col-sm-3">
+						<a id="contact-button" class="btn badge-pill" href="contact.html">Contact Us</a>
+					</div>
 				</p>
+				<br /><hr /><br />
+				<div class="container">
+				  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					  <li data-target="#myCarousel" data-slide-to="1"></li>
+					  <li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+					  <div class="item active">
+						<h3 style="text-align:center;">We're opening a new location!</h3>
+					  </div>
+					  <div class="item">
+						<h3 style="text-align:center;">We're rolling out our seasonal menu, with special options for this season.</h3>
+					  </div>
+					  <div class="item">
+						<h3 style="text-align:center;">The Drink of the Month is SG Special Brew.</h3>
+					  </div>
+					</div>
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					  <span class="glyphicon glyphicon-chevron-left"></span>
+					  <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+					  <span class="glyphicon glyphicon-chevron-right"></span>
+					  <span class="sr-only">Next</span>
+					</a>
+				  </div>
+				</div>				
 			</nav>
 			<article>
 					<img src="images/restaurant.jpg" alt="Ristorante Romano" width="400" style="margin: auto; display:block; margin-top:10px; margin-bottom: 10px;">
@@ -35,5 +73,10 @@
 					<p>(312) 476-6266</p>
 			</footer>
 		</main>
-	</body>
+		<noscript>This site is best viewed with JavaScript enabled!</noscript>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		</body>
 </html>
