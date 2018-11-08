@@ -8,8 +8,7 @@ function play() {
 		alert("Please make a bet for more than $0.00");
 		console.error("Please make a bet for more than $0.00");
 		return false;
-	}
-	else {
+	} else {
 		while (money > 0) {
 			if (money > max) {
 				max = money;
@@ -18,7 +17,6 @@ function play() {
 			count++;
 			var roll = rollDice();
 			var sum = roll[0] + roll[1];
-			// alert("Rolled a " + roll[0] + " and a " + roll[1] + ". Sum is: " + sum);
 			if(sum===7){
 				money += 4;
 			} else {
